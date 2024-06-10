@@ -6,3 +6,16 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
+
+model UserProfile {
+  country     String?
+  createdAt   DateTime  @default(now())
+  dateOfBirth DateTime?
+  firstName   String?
+  gender      String?
+  id          String    @id @default(cuid())
+  lastName    String?
+  profileId   String?
+  updatedAt   DateTime  @updatedAt
+  userId      String?
+}
